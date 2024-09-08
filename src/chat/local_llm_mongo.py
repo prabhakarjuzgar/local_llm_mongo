@@ -32,7 +32,7 @@ def get_collection():
 def create_search_index():
     index_model = SearchIndexModel(
         {
-            "fields":[
+            "fields": [
                 {
                     "type": "vector",
                     "path": "embedding",
@@ -49,7 +49,7 @@ def create_search_index():
 
 
 @cache
-def init_ollama(model:str="llama3") -> Ollama:
+def init_ollama(model: str = "llama3") -> Ollama:
     return Ollama(model=model)
 
 
